@@ -1,0 +1,369 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* padding: 2rem; */
+    overflow-x: hidden;
+    background: url("../img/img-catho.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* #eyes{
+    background:url("../img/view.png") ;
+} */
+
+#nav-top {
+    padding: 1rem;
+    background-color: #099AD8;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+#nav-top img {
+    height: 2vh;
+    width: 2vw;
+    /* display: none; */
+
+}
+
+/* #eyes img {
+    height: 2vh !important; 
+    width: 2vw !important;
+    /* display: none; */
+#show{
+    width: 90%;
+    border:none;
+    background: none;
+    outline: none;
+}
+
+ #show-mdp img{
+    height: 20px;
+    cursor: pointer;
+    vertical-align: mid dle;
+
+ }
+
+.input-l{
+    background-color: (red);
+}
+
+#nav-top a {
+    border-radius: 1rem;
+    background-color: #FADD02;
+    box-shadow: 0 0 .1rem #fff;
+    margin: 0 3rem;
+    /* font-size: 2rem; */
+    /* height: 4vh; */
+    color: #fff;
+    transition: .5s;
+}
+
+#nav-top a:hover {
+    background-color: #fff;
+    color: #B32362;
+    border-color: #B32362;
+    box-shadow: 0 0 .5rem #fff;
+
+}
+
+#nav-top input {
+    border-color: #099AD8;
+}
+
+/* #menu{
+    padding-left: 85%;
+}
+
+.menu{
+    height: 4vh;
+    color: #fff;
+    margin-right: 1rem;
+} */
+
+#head {
+    /* width: 100vw; */
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    /* display: block; */
+    /* justify-content: space-evenly; */
+    background-color: #fff;
+}
+
+#logo {
+    /* display: flex; */
+    margin-top: 5rem;
+    /* margin-right: 2rem; */
+    /* height: 30vh; */
+    /* padding: 15rem; */
+    width: 30vw;
+}
+
+#caroussel {
+    /* display: flex; */
+    margin-top: 3rem;
+    /* margin-left: 5rem; */
+    width: 40vw;
+}
+
+#caroussel img {
+    margin: 0;
+    height: 40vh;
+    /* border: 2rem solid #6093AC; */
+    /* border-radius: 5em 0 0 5em; */
+}
+
+
+#caroussel h5 {
+    font-size: 3em;
+}
+
+#contenu {
+    margin: 5rem 7rem;
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem #fff;
+    flex-direction: column;
+}
+
+
+#contenu hr {
+    border-color: #159D40;
+}
+
+.mvt-maitres {
+    margin: 2rem;
+}
+
+#quisommesnous h3 {
+    text-align: left;
+    color: #fff;
+}
+
+#quisommesnous {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.titre-menu {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+/* #card{
+    background-image: url("../img/carroussel/lion.jpg");
+} */
+
+#card-sinformer {
+    border-radius: 3rem;
+    text-align: center;
+    width: 40vw;
+    margin: .5rem auto;
+}
+
+#sinformer {
+    border: none;
+    background-color: #FADD02;
+    color: #fff;
+}
+
+#style-btn-sinformer {
+    /* color: #159D40; */
+    font-size: 1.5rem;
+    border-radius: 25px;
+    /* border-color: #159D40; */
+}
+
+#card-sinscrire {
+    border-radius: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+    width: 40vw;
+    margin: .5rem auto;
+
+}
+
+#je-candidate {
+    border: none;
+    background-color: #B32362;
+    color: #fff;
+}
+
+#opt-txt-reglementaire {
+    text-align: center;
+}
+
+#info-inscription {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    /* border: .1em solid #159D40; */
+    padding: 2em;
+    color: #099AD8;
+}
+
+#btn-inscription {
+    background-color: #159D40;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.actu {
+    display: block;
+    color: #099AD8;
+    background-color: rgba(0, 0, 0, .3);
+    text-align: center;
+    border-left: .15em solid #159D40;
+    border-radius: 0 2rem 2rem 0;
+}
+
+/* #logo-partenaire{
+    background-image: url("../img/logo-partenaires/logologo.png");
+    background-color: #fff !important;
+} */
+
+#footer {
+    background-color: #159D40;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1070px) {
+    #contenu {
+        flex-direction: row;
+
+    }
+
+    #card-actu {
+        width: 18rem;
+    }
+
+
+}
+
+@media (max-width: 1070px) {
+
+    .mvt-maitres {
+        margin: 2rem 0;
+    }
+
+    #footer {
+        flex-direction: column;
+        /* background-color: red !important;  */
+    }
+
+    #head {
+        margin: 0 !important;
+    }
+
+    #nav-top img {
+        height: 10vh;
+        width: 10vw;
+        display: block;
+
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #style-btn-sinformer {
+        /* color: #159D40; */
+        font-size: 1rem;
+        border-radius: 25px;
+        /* border-color: #159D40; */
+    }
+
+    #info-inscription {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        /* border: 0.1em solid #159D40; */
+        padding: 0em;
+        color: #099AD8;
+    }
+
+    #caroussel {
+        margin: 3rem 0;
+        width: 100vw;
+    }
+
+    #head {
+        width: 100vw;
+        padding: 0rem;
+        display: flex;
+        justify-content: space-around;
+        background-color: #fff;
+        margin-bottom: 5px;
+
+    }
+
+    .col-12 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .actu {
+        color: #099AD8;
+        background-color: rgba(0, 0, 0, .3);
+        text-align: center;
+        border-left: 0.15em solid #159d4000;
+        border-radius: 0 0 2rem 2rem;
+    }
+
+
+
+}
+
+/* .partenaire{
+    padding: 2rem 0;
+    border: .3rem dashed #B0F2B6;
+    border-radius: 25rem;
+    margin: 3rem 3rem;
+} */
+
+/* figcaption{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #6093AC;
+} */
+
+/* figure img{
+     display: inline;
+     width: 15%;
+     margin-left: 1rem;
+     border-radius: 50rem;
+     justify-content: space-evenly;
+} */
+
+#footer img {
+    border-radius: 90px;
+    height: 5rem;
+    width: 10rem;
+}
+
+ul pre {
+    text-decoration: none;
+    margin-right: 5rem;
+    text-align: left;
+}
+
+#footer2 {
+    background-color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer2 a {
+    color: #B32362;
+    text-decoration: none;
+}

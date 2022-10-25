@@ -1,0 +1,322 @@
+/* input[type="radio"]{
+    margin-left: .6rem;
+} */
+
+.ui-helper-hidden-accessible{
+    display: none;
+}
+
+#nav-top {
+    padding: 0;
+    background-color: #099AD8;
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 3rem; */
+}
+
+#nav-top img{
+    height: 10vh;
+    width: 10vw;
+}
+
+#nav-top a{
+    border-radius: 1rem;
+    background-color: #FADD02;
+    box-shadow: 0 0 .1rem #fff;
+    margin: 0;
+    font-size: 1rem;
+    /* height: 4vh; */
+    color: #B32362;
+    margin-right: 3rem;
+    transition: .5s;
+}
+
+.head{
+    height: 100vh;
+    margin: auto;
+    background-image: url("../img/femme.jpg");
+    background-size: 100%;
+    /* text-align: center; */
+    color: #fff;
+}
+
+.head h2 p{
+margin: auto;
+}
+
+[rne-etbsmt]:before { 
+    display: block; 
+    content: " "; 
+    margin-top: 75px; 
+    height: 75px;
+    visibility: hidden; 
+  }
+
+#compte a:hover{
+    box-shadow: 0 0 1rem #fff;
+}
+
+#deco a:hover{
+    background-color: #B32362;
+    color: #fff;
+    border-color: #B32362;
+    box-shadow: 0 0 .5rem #fff;
+}
+
+.contenu{
+    margin: 5rem;
+}
+
+.page{
+    padding: 1rem;
+    box-shadow: 0 0 .1rem #099AD8;
+    margin: 2rem;
+    overflow: hidden;
+}
+
+#page1{
+    /* align-items: left; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-user{
+    padding: .5rem;
+    border-right: .1em solid #099AD8;
+    margin-right: .5rem;
+    width: 60vw;
+}
+
+.etbsmt{
+    padding: .5rem;
+    border-left: .1em solid #099AD8;
+    margin-left: .5rem;
+    width: 40vw;
+}
+
+.ui-menu-item{
+    box-shadow: 0 0 .1rem #fff;
+    text-align: center;
+    background-color: #099AD8;
+    color: #fff;
+    margin: .5rem;
+    display: block;
+    width: 28%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    top: 4px;
+    margin-left: 1px;
+    list-style: none;
+}
+
+.ui-menu-item:hover{
+    box-shadow: 0 0 .3rem #099AD8;
+    text-align: center;
+    background-color: #fff;
+    color: #099AD8;
+    margin: .5rem;
+    display: block;
+    width: 28%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    top: 4px;
+    /* margin-left: 1px; */
+    list-style: none;
+}
+
+
+/* li .ui-menuui-widgetui-widget-contentui-autocompleteui-front {
+    display: none;
+} */
+
+#page2{
+    width: 50vw;
+    display: block;
+    position: static;
+    float: right;
+    
+}
+
+#page3{
+    position: static;
+    width: 50vw;
+    float: left;
+}
+
+#page4{
+    justify-content: space-evenly;
+    position: static;
+    width: 50vw;
+    float: right;
+}
+
+#btn-duplication{
+    /* margin: 1rem auto; */
+    text-align: center;
+    /* background-color: #099AD8; */
+    padding: 1rem 0;
+    font-size: 1rem; 
+}
+
+.inputDept{
+    padding: 0 2rem;
+}
+
+.inputDept label{
+    margin-right: 1.5rem;
+    margin-left: .5rem;
+    color: #B32362;
+}
+
+#ajout-academie{
+    background-color: #099AD8;
+    padding: .8rem;
+    /* width: 50%; */
+    border: none;
+    color: #fff;
+    /* position: bottom; */
+
+    height: 100px; 
+	width: 100px; 
+		/* background-color: blue; */
+		/* border: 5px solid rgba(0, 0, 0, 1); */
+	border-radius: 50%;
+    /* border: .5px solid #fff; */
+    box-shadow: 0 0 2rem #099AD8;
+    transition: 1s;
+}
+
+#ajout-academie:hover{
+    background-color: #fff;
+    color: #099AD8;
+    box-shadow: 0 0 1rem #099AD8;
+}
+
+.button{
+    /* margin: auto; */
+    /* background-color: #FADD02; */
+    border-radius: 5rem;
+
+    width: 50vw;
+    position: static;
+    float: right;
+    /* display: block; */
+}
+
+.liste-academie-souhaite{
+    box-shadow: 0 0 .1rem #099AD8;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+
+
+@media(max-width: 1070px){
+    .head{
+
+        background-image: url("../img/femme.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 50vh
+    }
+    #page1{
+        /* align-items: left; */
+        display: flex;
+        /* justify-content: space-around; */
+    }
+    .contenu {
+        margin: 0rem;
+    }
+    .page {
+        padding: 1rem;
+        box-shadow: 0 0 .3rem #099AD8;
+        margin: 2rem;
+        overflow: hidden;
+        flex-direction: column;
+    }
+  
+    .info-user {
+
+        padding: .5rem;
+        border-right: none;
+        margin-right: .5rem;
+        width: 70vw;
+    }
+    .etbsmt{
+        padding: .5rem;
+        border-left: none;
+        margin-left: .5rem;
+        width: 70vw;
+    }
+     #page2 {
+        width: 90vw;
+        /* display: block; */
+        /* position: static; */
+        /* float: right; */
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    } 
+
+     #page3 {
+        position: static;
+        float: left;
+          width: 90vw; 
+          margin-left: 1.5rem;
+          margin-right: .5rem;
+        } 
+     #page4 {
+        position: static;
+        float: left;
+          width: 90vw; 
+          margin-left: 1.5rem;
+          margin-right: .5rem;
+        } 
+
+        .ui-menu-item{
+            box-shadow: 0 0 .1rem #fff;
+            text-align: center;
+            background-color: #099AD8;
+            color: #fff;
+            margin: .5rem;
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 0.75rem + 2px);
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            top: 4px;
+            margin-left: 1px;
+            list-style: none;
+        }
+        
+        .ui-menu-item:hover{
+            box-shadow: 0 0 .3rem #099AD8;
+            text-align: center;
+            background-color: #fff;
+            color: #099AD8;
+            margin: .5rem;
+            display: block;
+            width: 50%;
+            height: calc(1.5em + 0.75rem + 2px);
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            top: 4px;
+            /* margin-left: 1px; */
+            list-style: none;
+        }
+}
+

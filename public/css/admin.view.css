@@ -1,0 +1,243 @@
+
+@keyframes beating_heart {
+    25% {
+        color: red;
+        font-size: 1.1em;
+        letter-spacing: .25em;
+    }
+
+    50% {
+        color: yellow;
+        font-size: 1.5em;
+        letter-spacing: .5em;
+    }
+
+    100% {
+        color: green;
+        font-size: 2em;
+        letter-spacing: .75;
+    }
+}
+body {
+    margin: 0;
+    /* background-attachment: fixed; */
+}
+
+#nav-top {
+    padding: 0;
+    background-color: #099AD8;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-top img {
+    height: 10vh;
+    width: 10vw;
+}
+
+#nav-top a {
+    border-radius: 1rem;
+    background-color: #FADD02;
+    box-shadow: 0 0 .1rem #fff;
+    margin: 0;
+    font-size: 1rem;
+    /* height: 4vh; */
+    color: #B32362;
+    margin-right: 3rem;
+    transition: .5s;
+}
+#compte a:hover {
+    box-shadow: 0 0 1rem #fff;
+}
+
+#deco a:hover {
+    background-color: #B32362;
+    color: #fff;
+    border-color: #B32362;
+    box-shadow: 0 0 .5rem #fff;
+}
+
+#titre{
+    color: #099AD8;
+}
+
+.banniere{
+    background-color: green;
+    padding: 1rem 1rem;
+}
+
+.slide-menu{
+    margin: 2rem 0;
+    padding: 1rem;
+    height: 10vh;
+    background-color: #159D40;
+}
+
+#btn-tableau-bord{
+    margin: auto;
+    margin-right: 50rem;
+    text-align: center;
+    color: #fff;
+    border-left: #FADD02 solid .2rem;
+    /* border-bottom: #FADD02 solid .2rem; */
+    background-color: #159D40;
+    font-size: 2rem;
+}
+
+#btn-tableau-bord:hover{
+    border-bottom: #FADD02 solid .2rem;
+    border-right: #FADD02 solid .2rem;
+}
+
+#head-modal-info-user{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    /* padding: 1rem; */
+}
+
+/* #form-modif-info-user{
+    border: #099AD8 solid .1em;
+    margin: 0 1rem;
+} */
+
+.c-dialog {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    padding: 2.4rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(black, .75);
+    transition: .2s;
+  }
+  
+ 
+  .c-dialog__box {
+    flex: 1;
+    max-width: 30rem;
+    margin: auto;
+    padding: 2.4rem;
+    background-color: white;
+    border: solid black 1rem;
+  }
+  
+  
+  .c-dialog[aria-hidden="true"] {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+.test{
+    margin: 1rem 5rem;
+    border: #B32362 solid .2rem;
+}
+.manquant{
+    color: red;
+}
+
+.info-1{
+    border: #159D40 solid .2rem;
+    /* margin: 2rem; */
+    padding: 1rem;
+    width: 100%;
+}
+
+#body-modal-info-etbsmt{
+    margin: auto;
+    padding: 2rem;
+    border: #099AD8 solid .1em;
+    text-align: center;
+}
+
+#body-modal-info-demande-user{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.voeux{
+    box-shadow: 0 0 .5rem #159D40;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#btn-menu-slide{
+    margin: auto 10rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-slide{
+    border: none;
+    background-color: #159D40;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.btn-slide:hover{
+    border-bottom: #FADD02 solid .2rem;
+}
+
+
+#formulaire-membres{
+    width: 20vw;
+    box-shadow: 0 0 .1rem #099AD8;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#div-actualites{
+    margin: 3rem;
+    display: none;
+}
+
+#card-actu{
+    box-shadow: 0 0 .1rem #099AD8;
+    border-radius: 2rem;
+    margin: 2rem;
+    width: 60vw;
+}
+
+#creer-actualites{
+    padding: 0 2rem;
+    margin-left: 5rem;
+    border-left: #159D40 dashed .1rem;
+}
+
+#formulaire-actualites{
+    width: 20vw;
+    box-shadow: 0 0 .1rem #099AD8;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#dropdown-menuu{
+    position: absolute;
+    top: 100%;
+    /* left: 0; */
+    z-index: 1000;
+    display: none;
+    /* float: right; */
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #fff;
+    text-align: left;
+    list-style: none;
+    background-color: #FADD02;
+    background-clip: padding-box;
+    border: 1px solid #FADD02;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 .5rem #FADD02;
+  }
