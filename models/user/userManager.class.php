@@ -55,7 +55,7 @@ class UserManager extends Manager
     public function mutation_utilisateur(
         $type_mutation, $date_demande, $situation, $type_contrat, $date_contrat, $contrat, $statut_situation, $disponibilite, $autre_disponibilite, $date_debut_disponibilite, $echelle_remuneration,$autre_remuneration, $remuneration_classe, $echelon, $echelon_autre, $anciennete_service, $statut, $id_utilisateur
     ) {
-        $sql = $this->getDb()->prepare("INSERT INTO demande_mutation(type_mutation, date_demande, situation, type_contrat, date_contrat, contrat, statut_situation, disponibilite, autre_disponibilite, date_debut_disponibilite, echelle_remuneration, autre_remuneration, remuneration_classe, echelon,echelon_autre, anciennete_service, statut_demande, id_utilisateur)
+        $sql = $this->getDb()->prepare("INSERT INTO demande_mutation(type_mutation, date_demande, situation, type_contrat, date_contrat, contrat, statut_situation, disponibilite, autre_disponibilite, date_debut_disponibilite, echelle_remuneration, autre_remuneration, remuneration_classe, echelon, echelon_autre, anciennete_service, statut_demande, id_utilisateur)
         VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         $param = [

@@ -24,7 +24,6 @@
     <!-- nav bar -->
     <nav id="nav-top" class="navbar navbar-expand-md navbar-dark fixed">
 
-      <img src="public/img/logo/logo_Versailles.jpg" class="" alt="logo-CAE">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

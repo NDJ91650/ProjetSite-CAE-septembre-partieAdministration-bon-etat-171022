@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="../public/css/admin.view.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script>
+        window.myUrl = "<?= URL ?>"
+        console.log(window);
+    </script>
     <script src="../public/js/admin.view.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <title><?= $titre ?></title>
 </head>
 
@@ -78,6 +83,22 @@
                 <button type='submit'>envoi</button>
                 <button type='submit'>Reinitialiser rechercher</button>
             </form>
+
+            <div>
+
+            <form method='POST' action=' . URL . "compte/rechercheInformations/" . $admin["id_utilisateur"] . "' enctype='multipart/form-data'>
+                <div class="btn-group">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                    Trier par : 
+                    </button>
+                <div class="dropdown-menu">
+                <button type='submit' value="">Justificatif Manquant</button>
+            </form>
+  </div>
+</div>
+
+            
+            </div>
             <br>
             <?php
             // var_dump($data["recherche"]);
@@ -592,7 +613,7 @@
 
                                                                                     </main>
                                                                                             <br>
-                                                                                        <div id='modal-mutation-" . $mutation["id_mutation"] . "' role='dialog' aria-labelledby='dialog-title' aria-describedby='dialog-desc' aria-modal='true' aria-hidden='true' tabindex='-1' class='c-dialog'>
+                                                                                        <div id='modal-mutation-" . $mutation["id_mutation"] . "' role='dialog' aria-labelledby='dialog-title' aria-describedby='dialog-desc' aria-modal='true' aria-hidden='true' tabindex='' class='c-dialog'>
                                                                                         <div role='document' class='c-dialog__box'>
                                                                                                  <button type='button' aria-label='Fermer' title='Fermer cette fenêtre modale' data-dismiss='dialog'>X</button>
                                                                                          
@@ -704,7 +725,7 @@
                                                                                                 <div class='row'>
                                                                                                 <div class='col form-group'>
                                                                                                 <label for='chelle-remuneration'>Echelle de rémunération :</label>
-                                                                                                <select class='custom-select' onchange='autreRemuneration(" . $mutation["id_mutation"] . ")' id='echelle-remuneration" . $mutation["id_mutation"] . "' name='echelle_remuneration' required >
+                                                                                                <select class='custom-select' onchange='autreRemuneration(" . $mutation["id_mutation"] . ")' id='echelle-remuneration" . $mutation["id_mutation"] . "' name='echelle_remuneration'  >
                                                                                                     <option value='' selected >Selectionner votre réponse</option>
                                                                                                     <option value='Certifié'>Certifié</option>
                                                                                                     <option value='Agrégé'>Agrégé</option>
@@ -975,7 +996,12 @@
                                                                             <td>" . $demande_user["motif_demande"] . "</td>
                                                                             <td>" . $demande_user["autre_motif"] . "</td>
                                                                             <td>" . $demande_user["pre_codification"] . "</td>
-                                                                            <td contenteditable='true'>" . $demande_user["codification"] . "</td>
+                                                                            <td> <div contenteditable='true' id='".$demande_user["id_voeux"]."' > " . $demande_user["codification"] . "
+                                                                            
+                                                                            </div> <input type='button' onclick='update(".$demande_user["id_voeux"].")' value='mise à jour '>  </td>
+
+
+
                                                                             <td><a href='../public/img/fichier-utilisateurs/" . $demande_user["justificatif_motif"] . "' target='_blank''>" . $demande_user["justificatif_motif"] . "</a></td>
                                                                             <td>" . $demande_user["id_mutation"] . "</td>
                                                                             </tr>

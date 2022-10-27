@@ -32,14 +32,41 @@ class AdminManager extends Manager{
         return $result;
     }
 
-   public function modification_infoMutation($champs, $valeur, $id_mutation){
-        $sql="UPDATE  demande_mutation  SET " . $champs ." = ? WHERE id_mutation = ? ";
-        $param=[$valeur, $id_mutation];
-        $res = $this->getDb()->prepare($sql);
-        $result = $res->execute($param);
-    // $result = array_filter($resulta);
-        return $result;
+    
+    public function modification_infoMutation($champs, $valeur, $id_mutation){
+         $sql="UPDATE  demande_mutation  SET " . $champs ." = ? WHERE id_mutation = ? ";
+         $param=[$valeur, $id_mutation];
+         $res = $this->getDb()->prepare($sql);
+         $result = $res->execute($param);
+     // $result = array_filter($resulta);
+         return $result;
+     }
+
+    public function verif_codif($statut){
+         $sql="UPDATE   demande_mutation d, voeux_user v  SET d.statut_demande = ? WHERE v.id_mutation = d.id_mutation";
+         $param = [$statut];
+         $res = $this->getDb()->prepare($sql);
+         $result = $res->execute($param);
+     // $result = array_filter($resulta);
+         return $result;
+     }
+
+     public function codif(){
+
+        $result = [];
+        $sql= "SELECT codification  FROM voeux_user v JOIN demande_mutation d  WHERE codification is not null && v.id_mutation = d.id_mutation ;
+        ";
+       $res = $this->getDb()->prepare($sql);
+       $res->execute();
+       $result= $res->fetchAll(PDO::FETCH_ASSOC);
+       
+      
+       
+       return $result;
+
     }
+    
+
 
     public function getPasswordadmin($identifiant)
     {
@@ -177,34 +204,7 @@ class AdminManager extends Manager{
             $demandes_clean[$e->getType_mutation()] = $this->getVoeux_user($e->getId_mutation());
             // var_dump($result);
         }
-        //  var_dump($demandes_clean);
-
-        // foreach($result as $key=>$value){
-        //     // var_dump($value);
-        //     $voeux = new Voeux;
-        //     $voeux->setId_voeux($value["id_voeux"]);
-        //     $voeux->setAcademie_souhaite($value["academie_souhaite"]);
-        //     @$voeux->setChoix1($value["choix1"]);
-        //     @$voeux->setChoix2($value["choix2"]);
-        //     @$voeux->setChoix3($value["choix3"]);
-        //     @$voeux->setChoix4($value["choix4"]);
-        //     @$voeux->setChoix5($value["choix5"]);
-        //     @$voeux->setChoix6($value["choix6"]);
-        //     @$voeux->setChoix7($value["choix7"]);
-        //     @$voeux->setChoix8($value["choix8"]);
-        //     $voeux->setType_contrat_souhaite($value["type_contrat_souhaite"]);
-        //     $voeux->setNb_heures_souhaite($value["nb_heures_souhaite"]);
-        //     $voeux->setMotif_demande($value["motif_demande"]);
-        //     $voeux->set_Autre_motif($value["autre_motif"]);
-        //     $voeux->set_Justificatif_motif($value["justificatif_motif"]);
-        //     $voeux->set_Id_mutation($value["id_mutation"]);
-        // }
-
-        // $demandes_clean[$e->getType_mutation()] = $result;
-        // var_dump($demandes_clean);
-        // echo "<pre>";
-        // var_dump($demandes_clean);
-        // echo "<pre>";
+       
 
         return $demandes_clean;
 
@@ -260,6 +260,7 @@ class AdminManager extends Manager{
             $res["sql5"]=$this->getDB()->prepare($sql5);
             $res["sql5"]->execute();
             $result_recherche["sql5"]=$res["sql5"]->fetchAll(PDO::FETCH_ASSOC);
+
 
             $result_recherche_clean = array_filter($result_recherche);
             return @$result_recherche_clean;
@@ -371,14 +372,33 @@ class AdminManager extends Manager{
 
         
     }
-    // public function suppresssionmutation($id_mutation){
-    //     $sql ="DELETE  from demande_mutation where id_mutation=?;";
+    public function filtre_information($id_mutation){
+        $sql ="DELETE  from demande_mutation where id_mutation=?;";
        
-    //     $param = [$id_mutation];
-    //     $res = $this->getDb()->prepare($sql);
-    //     $res->execute($param);
-    //     $res->closeCursor();
-    // }
+        $param = [$id_mutation];
+        $res = $this->getDb()->prepare($sql);
+        $res->execute($param);
+        $res->closeCursor();
+    }
 
+    public function codification(){
+        if(isset($_POST['html']) && isset($_POST['id'])&& $_POST['id']>0
+        ){
+        $html= $_POST['html'];
+        $id= $_POST['id']; 
+
+        // $sql= "UPDATE voeux_user  SET codification = '$html' WHERE id_voeux = '$id'";
+        $sql= "UPDATE voeux_user  SET codification = '$html' WHERE id_voeux = '$id';";
+        $res = $this->getDb()->prepare($sql);
+        $res->execute();
+        $result= $res->fetch(PDO::FETCH_ASSOC);
+        
+    }
+        
+    echo 'codification mis à jour';
+
+    }
+
+  
     
 }

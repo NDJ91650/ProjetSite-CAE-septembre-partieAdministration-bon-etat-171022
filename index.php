@@ -103,10 +103,9 @@ try {
                         case "modifierInfoMutation":
                             $admin->modification_info_mutation($url[2]);
                             break;
-                        case "supprimerDemande":
-                            $admin->supprimerDemande($url[2]);
-                            break;
-                      
+                            case "affichage-codif":
+                                $admin->affichage_codif();
+                                break;
                         case "deconnexion":
                             $admin->deconnexion();
                             break; 

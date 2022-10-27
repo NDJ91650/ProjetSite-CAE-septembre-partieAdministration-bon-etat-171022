@@ -186,5 +186,19 @@ class AdminController extends AbstractController{
         self::MessageAlerte("Vous avez été déconnecté", self::VERT);
         header("location: " . URL . "accueil");
     }
+
+
+    public function affichage_codif(){
+        $this->adminModel->codification();
+       $verification= $this->adminModel->codif();
+
+       $statut = "Terminé";
+        
+        if($verification){
+
+            $this->adminModel->verif_codif($statut);
+
+        }
+    }
 }
 

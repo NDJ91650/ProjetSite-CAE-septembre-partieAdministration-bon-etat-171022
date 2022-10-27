@@ -172,6 +172,7 @@ class UserController extends AbstractController
             $statut,
             $id_utilisateur
         );
+  
         
 
         if (!empty($_FILES["contrat"])) {
@@ -399,4 +400,7 @@ class UserController extends AbstractController
 
     //    var_dump($this->user->affichageDepartement());
     }
+
+
+   
 }

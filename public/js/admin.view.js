@@ -141,16 +141,6 @@ triggers.forEach((trigger) => {
 
 
 
-//  INFO UTILISATEUR
-// var formModifInfoUser = document.getElementById("form-modif-info-user");
-// var btnModifInfoUser = document.getElementById("btn-modifier-info-user");
-// var btnCloseFormInfoUser = document.getElementById("btn-close-form-info-user");
-
-// formModifInfoUser.style.display="none"
-
-// btnModifInfoUser.addEventListener("click", ()=>{
-//     formModifInfoUser.style.display="block";
-// })
 
 function display_form_info_user(id_utilisateur){
     console.log(id_utilisateur);
@@ -221,6 +211,21 @@ function autreRemuneration(id){
       document.getElementById("autre-remuneration"+id).style.display="none";
   }
 
+}
+
+
+function update(id){
+ let html = $('#'+id).html();
+ $.ajax({
+   url: window.myUrl+"compte/affichage-codif",
+   type : 'POST',
+   data :'html='+html+'&id='+id,
+   success: function(result){
+     
+     $('#msg'+id).html(result);
+    }
+  })
+  console.log(data);
 }
 
 

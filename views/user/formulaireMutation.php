@@ -381,7 +381,7 @@
                 <h2>IV. VOTRE SITUATION ADMINISTRATIVE</h2>
                 <div class="row">
                     <div class="col form-group">
-                        <label for="chelle-remuneration">Echelle de rémunération :</label>
+                        <label for="echelle-remuneration">Echelle de rémunération :</label>
                         <select class="custom-select" onchange="autreRemuneration()" id="echelle-remuneration" name="echelle_remuneration" required >
                             <option value="" selected >Selectionner votre réponse</option>
                             <option value="Certifié">Certifié</option>
@@ -428,8 +428,7 @@
                         <div style="display: none;" id="echelon-autre">
                             <label >Si "Autre", vous avez la possibilité de donner votre echelon  :</label>
                             <input type="number" size="1" class="form-control" id="echelon-autre" name="echelon_autre">
-
-                    </div>
+                        </div>
                     </div>
                  
                 </div>
@@ -544,8 +543,6 @@
                             <div class="col form-group">
                                 <label for="justificatif-motif">Justificatif :</label><br>
                                 <input  name="justificatif_motif" type="file" class="form-control" id="justificatif-motif" accept="application/pdf, application/docx, application/doc, application/odt" title="Taille maximale autorisée: 2Mo">
-                                <!-- <input type="file" name="justificatif_motif" id="justificatif-motif"  > -->
-                                <!-- SÉCURITÉ ANTI BOT -->
                                 <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
                             </div>
                         </div>
@@ -554,7 +551,6 @@
                             <input type="text" class="form-control" id="autre-motif" name="autre_motif">
                         </div>
 
-                        <!-- <br> -->
                     </div>
                 </fieldset>
                 <div id="btn-duplication">
